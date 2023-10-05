@@ -44,11 +44,14 @@ public class EnemyAI : MonoBehaviour
 
     private void AttackTarget()
     {
+        GetComponent<Animator>().SetBool("Attack", true);
         Debug.Log(name + " has seeked and is destroyed " + target.name);
     }
 
     private void ChaseTarget()
     {
+        GetComponent<Animator>().SetBool("Attack", false);
+        GetComponent<Animator>().SetTrigger("Move");
         navMeshAgent.SetDestination(target.position);
     }
 
