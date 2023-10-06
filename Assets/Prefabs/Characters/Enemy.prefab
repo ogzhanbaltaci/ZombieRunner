@@ -121,6 +121,7 @@ GameObject:
   - component: {fileID: 7898277363340613228}
   - component: {fileID: 2483201042336246484}
   - component: {fileID: 2856392030683542020}
+  - component: {fileID: 4205437276018698633}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -142,7 +143,7 @@ Transform:
   m_Children:
   - {fileID: 312121014989317284}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2348141396943426781
 MeshFilter:
@@ -287,3 +288,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4205437276018698633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8326655384491198928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7722ba3c7ce87a34eab2ff5f5a998c7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  damage: 40
