@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -29,6 +30,11 @@ public class EnemyAI : MonoBehaviour
         {
             isProvoked = true;
         }
+    }
+    
+    public void OnDamageTaken()
+    {
+        isProvoked = true;
     }
 
     private void EngageTarget()
