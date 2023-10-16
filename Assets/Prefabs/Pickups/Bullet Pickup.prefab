@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1819563453559335870}
   - component: {fileID: 4539249059493167441}
   - component: {fileID: 2368171797152502285}
-  - component: {fileID: 1971775749129927403}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -84,27 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1971775749129927403
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1712727540970819569}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &7861756158642770212
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -113,13 +91,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4303401710274445547, guid: b78af9dde57db3c4dadd2f70c121fc8d, type: 3}
+      propertyPath: m_Radius
+      value: 0.73
+      objectReference: {fileID: 0}
     - target: {fileID: 6493351403044351973, guid: b78af9dde57db3c4dadd2f70c121fc8d, type: 3}
       propertyPath: m_Name
       value: Bullet Pickup
       objectReference: {fileID: 0}
     - target: {fileID: 8559808352673183805, guid: b78af9dde57db3c4dadd2f70c121fc8d, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8559808352673183805, guid: b78af9dde57db3c4dadd2f70c121fc8d, type: 3}
       propertyPath: m_LocalPosition.x

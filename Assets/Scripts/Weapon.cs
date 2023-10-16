@@ -12,6 +12,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] GameObject hitEffect;
     [SerializeField] Ammo ammoSlot;
     [SerializeField] AmmoType ammoType;
+    [SerializeField] ProceduralRecoil proceduralRecoil;
     [SerializeField] float timeBetweenShots = 0.5f;
 
     bool canShoot = true;
@@ -22,7 +23,7 @@ public class Weapon : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetMouseButtonDown(0) && canShoot == true)
+        if(Input.GetMouseButton(0) && canShoot == true)
         {
             StartCoroutine(Shoot());   
         }
@@ -35,6 +36,7 @@ public class Weapon : MonoBehaviour
         {
             PlayMuzzleFlash();
             ProcessRaycast();
+            proceduralRecoil.Recoil();
             ammoSlot.ReduceCurrentAmmo(ammoType);
         }
         yield return new WaitForSeconds(timeBetweenShots);

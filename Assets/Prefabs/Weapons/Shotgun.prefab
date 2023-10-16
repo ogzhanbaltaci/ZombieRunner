@@ -262,6 +262,7 @@ GameObject:
   - component: {fileID: 2337074159000356742}
   - component: {fileID: 2337074158999389510}
   - component: {fileID: 8876244162446547270}
+  - component: {fileID: 616250326615920262}
   m_Layer: 0
   m_Name: Shotgun
   m_TagString: Untagged
@@ -288,7 +289,7 @@ Transform:
   - {fileID: 3760781081078919883}
   - {fileID: 4227923680028061727}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2337074159000356742
 MeshFilter:
@@ -359,7 +360,27 @@ MonoBehaviour:
   hitEffect: {fileID: 1766814854480755888, guid: c0afdbdb1803a3242974df91a270faed, type: 3}
   ammoSlot: {fileID: 0}
   ammoType: 1
+  proceduralRecoil: {fileID: 616250326615920262}
   timeBetweenShots: 0.5
+--- !u!114 &616250326615920262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2337074158997199750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 444cd634b22955d468b7cc417228fcab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  recoilX: -3
+  recoilY: 3
+  recoilZ: 10
+  kickBackZ: 0.5
+  snappiness: 6
+  returnAmount: 8
 --- !u!1 &2337074158997199752
 GameObject:
   m_ObjectHideFlags: 0
