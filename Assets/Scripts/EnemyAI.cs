@@ -12,13 +12,15 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] float turnSpeed = 5f;
     NavMeshAgent navMeshAgent;
     float distanceToTarget = Mathf.Infinity;
-    bool isProvoked = false;
+    public bool isProvoked = false;
     EnemyHealth health;
+    Animator enemyAnimator;
 
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         health = GetComponent<EnemyHealth>();
+        enemyAnimator = GetComponent<Animator>();
     }
 
     void Update()
@@ -59,13 +61,13 @@ public class EnemyAI : MonoBehaviour
 
     private void AttackTarget()
     {
-        GetComponent<Animator>().SetBool("Attack", true);
+        enemyAnimator.SetBool("Attack", true);
     }
 
     private void ChaseTarget()
     {
-        GetComponent<Animator>().SetBool("Attack", false);
-        GetComponent<Animator>().SetTrigger("Move");
+        enemyAnimator.SetBool("Attack", false);
+        enemyAnimator.SetTrigger("Move");
         navMeshAgent.SetDestination(target.position);
     }
 
@@ -82,4 +84,5 @@ public class EnemyAI : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, chaseRange);
     }
+    
 }

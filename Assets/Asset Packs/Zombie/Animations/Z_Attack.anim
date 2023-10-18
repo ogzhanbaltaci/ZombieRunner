@@ -24684,14 +24684,14 @@ AnimationClip:
   - time: 0.3
     functionName: AttackHitEvent
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 8326655384491198928, guid: 40dc4adccb32a154eba88aa2848777c7, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.6666667
     functionName: AttackHitEvent
     data: 
-    objectReferenceParameter: {fileID: 0}
+    objectReferenceParameter: {fileID: 8326655384491198928, guid: 40dc4adccb32a154eba88aa2848777c7, type: 3}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0

@@ -18,6 +18,7 @@ public class ProceduralRecoil : MonoBehaviour
 
     [SerializeField] float kickBackZ;
 
+
     public float snappiness, returnAmount;
     void Start() 
     {

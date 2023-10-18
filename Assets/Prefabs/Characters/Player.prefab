@@ -244,6 +244,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPoints: 100
+  isPlayer: 1
+  isZombie: 0
 --- !u!114 &4596014107379114942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,6 +259,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverCanvas: {fileID: 0}
+  starterAssetsInputs: {fileID: 0}
+  weaponSwitcher: {fileID: 0}
 --- !u!114 &4601485982821931089
 MonoBehaviour:
   m_ObjectHideFlags: 0

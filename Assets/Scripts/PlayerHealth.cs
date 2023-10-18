@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerHealth : Health
 {
-    
-    [SerializeField] float hitPoints = 100f;
+    private DeathHandler deathHandler;
 
-
-    public void TakeDamage(float damage)
+    private void Start()
     {
-        hitPoints -= damage;
-        if(hitPoints <= 0)
-        {
-            GetComponent<DeathHandler>().HandleDeath();
-        }
+        deathHandler = GetComponent<DeathHandler>();
+    }
+
+    protected override void Die()
+    {
+        base.Die(); 
+        deathHandler.HandleDeath();
     }
 }

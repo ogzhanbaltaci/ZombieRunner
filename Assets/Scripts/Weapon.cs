@@ -10,6 +10,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] float damage = 30f;
     [SerializeField] ParticleSystem muzzleFlash;
     [SerializeField] GameObject hitEffect;
+    //[SerializeField] GameObject bloodHitEffect;
     [SerializeField] Ammo ammoSlot;
     [SerializeField] AmmoType ammoType;
     [SerializeField] ProceduralRecoil proceduralRecoil;
@@ -52,8 +53,8 @@ public class Weapon : MonoBehaviour
     {
         RaycastHit hit;
         if (Physics.Raycast(FPCamera.transform.position, FPCamera.transform.forward, out hit, range))
-        {
-            CreateHitImpact(hit);
+        {   
+            CreateHitImpact(hit, hitEffect);
             EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
             if (target == null) return;
             target.TakeDamage(damage);
@@ -64,10 +65,10 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    private void CreateHitImpact(RaycastHit hit)
+    private void CreateHitImpact(RaycastHit hit, GameObject effect)
     {
-        GameObject impact = Instantiate(hitEffect, hit.point, Quaternion.LookRotation(hit.normal));
+        GameObject impact = Instantiate(effect, hit.point, Quaternion.LookRotation(hit.normal));
 
-        Destroy(impact, .1f);
+        Destroy(impact, 1f);
     }
 }

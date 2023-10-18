@@ -3,33 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHealth : MonoBehaviour
+public class EnemyHealth : Health
 {
-    [SerializeField] float hitPoints = 100f;
+    private EnemyAI enemyAI;
 
-    bool isDead = false;
-
-    public bool IsDead()
-    {   
-        return isDead;
+    private void Start()
+    {
+        enemyAI = GetComponent<EnemyAI>();
     }
 
-
-    public void TakeDamage(float damage)
+    protected override void Die()
     {
-        BroadcastMessage("OnDamageTaken");
-        hitPoints -= damage;
-        if(hitPoints <= 0)
-        {
-            Die();
-        }
-    }
-
-    private void Die()
-    {
-        if(isDead) return;
-        isDead = true;
+        base.Die(); 
+        enemyAI.isProvoked = false;
+        GetComponent<CapsuleCollider>().enabled = false;
         GetComponent<Animator>().SetTrigger("Die");
     }
-     
 }

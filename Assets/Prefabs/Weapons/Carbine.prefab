@@ -290,7 +290,7 @@ Transform:
   - {fileID: 3760781081078919883}
   - {fileID: 4227923680028061727}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2337074159000356742
 MeshFilter:
@@ -358,7 +358,7 @@ MonoBehaviour:
   range: 50
   damage: 30
   muzzleFlash: {fileID: 2808333682833823568}
-  hitEffect: {fileID: 1766814854480755888, guid: c0afdbdb1803a3242974df91a270faed, type: 3}
+  hitEffect: {fileID: 100002, guid: 00fedc70b62a31e448e8ccc298257b56, type: 3}
   ammoSlot: {fileID: 0}
   ammoType: 2
   proceduralRecoil: {fileID: 0}
