@@ -5,17 +5,19 @@ using UnityEngine;
 public class EnemyAttack : MonoBehaviour
 {
     PlayerCatcher playerCatcher;
+    
     [SerializeField] float damage = 40f;
     void Start()
     {
         playerCatcher = GetComponentInChildren<PlayerCatcher>();
+        
     }
 
     public void AttackHitEvent()
     {
         if(playerCatcher.target == null) return;
         playerCatcher.target.TakeDamage(damage);
-        Debug.Log("bang bang");
+        playerCatcher.target.GetComponent<DisplayDamage>().ShowDamageImpact();
     }
 
     
